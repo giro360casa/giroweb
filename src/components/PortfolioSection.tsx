@@ -1,12 +1,12 @@
 import { motion } from "framer-motion";
 import portfolio1 from "@/assets/portfolio-1.jpg";
 import portfolio2 from "@/assets/portfolio-2.jpg";
-import portfolio3 from "@/assets/portfolio-3.jpg";
+import portfolio3 from "@/assets/welcomep.jpg";
 
 const projects = [
-  { img: portfolio1, title: "Desert Resort & Spa", category: "Hospitality" },
-  { img: portfolio2, title: "Grand Hotel Lobby", category: "Hotels" },
-  { img: portfolio3, title: "Corporate Headquarters", category: "Corporate" },
+  { img: portfolio1, title: "villa dante parco", category: "parco", url: "https://welcome-ten-black.vercel.app/" },
+  { img: portfolio2, title: "villa dante", category: "Library", url: "https://villa-dante-library.vercel.app/" },
+  { img: portfolio3, title: "Corporate Headquarters", category: "universty of messina", url: "https://welcome-point.vercel.app/" },
 ];
 
 const PortfolioSection = () => {
@@ -27,7 +27,10 @@ const PortfolioSection = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {projects.map((project, i) => (
-            <motion.div
+            <motion.a
+              href={project.url}             // Added this
+              target="_blank"                // Opens in a new tab
+              rel="noopener noreferrer"
               key={project.title}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -47,7 +50,7 @@ const PortfolioSection = () => {
                   Explore Tour
                 </span>
               </div>
-            </motion.div>
+            </motion.a>
           ))}
         </div>
       </div>

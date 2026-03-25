@@ -2,24 +2,32 @@ import { motion } from "framer-motion";
 import heroPanorama from "@/assets/hero-panorama.jpg";
 import walkWithUsImage from "@/assets/walk-with-us.png";
 import giroLogoVertical from "@/assets/giro-logo-vertical.png";
+// Change these two lines:
+import portfolio1 from "@/assets/portfolio-1.jpg";
+import portfolio2 from "@/assets/portfolio-2.jpg";
+import portfolioW from "@/assets/welcomep.jpg";
 
 const HeroSection = () => {
   const virtualTourSamples = [
     {
-      name: "Welcome Point New",
-      url: "https://pano.cool/@giro360.casaYK6iWKGO/welcome-point-new",
+      name: "Welcome Point",
+      url: "https://welcome-point.vercel.app/",
+      image: portfolioW,
     },
     {
-      name: "Sample Tour 2",
-      url: "https://pano.cool/p/01KM0S4NGPFNF731T9RTTJ3NSQ",
+      name: "villadante parco",
+      url: "https://welcome-ten-black.vercel.app/",
+      image: portfolio1,
     },
     {
       name: "Villa Dante",
-      url: "https://pano.cool/@giro360.casaYK6iWKGO/villa-dante",
+      url: "https://villa-dante-library.vercel.app/",
+      image: portfolio2,
     },
     {
       name: "Your New Home",
       url: "https://your-new-home-nu.vercel.app/",
+      image: null,
     },
   ];
 
@@ -46,9 +54,9 @@ const HeroSection = () => {
             transition={{ duration: 0.8 }}
             className="mb-8 flex justify-center"
           >
-            <img 
-              src={giroLogoVertical} 
-              alt="GIRO 360" 
+            <img
+              src={giroLogoVertical}
+              alt="GIRO 360"
               className="h-80 w-auto"
             />
           </motion.div>
@@ -198,7 +206,7 @@ const HeroSection = () => {
               alt="Luxury property virtual tour"
               className="w-full h-full object-cover"
             />
-            
+
             {/* 360 Viewer Icon */}
             <motion.div
               initial={{ opacity: 0, scale: 0.8 }}
@@ -229,7 +237,7 @@ const HeroSection = () => {
                   >
                     <div className="aspect-square w-full bg-gray-600 rounded-md overflow-hidden mb-2 flex items-center justify-center">
                       <img
-                        src="https://via.placeholder.com/120x120?text=Tour+Preview"
+                        src={sample.image || "https://via.placeholder.com/120x120?text=Tour+Preview"}
                         alt={sample.name}
                         className="object-cover w-full h-full opacity-80 group-hover:opacity-100 transition"
                       />
