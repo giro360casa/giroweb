@@ -10,8 +10,8 @@ import portfolioW from "@/assets/welcomep.jpg";
 const HeroSection = () => {
   const virtualTourSamples = [
     {
-      name: "Welcome Point",
-      url: "https://welcome-point.vercel.app/",
+      name: "villa House",
+      url: "https://your-new-home-nu.vercel.app/",
       image: portfolioW,
     },
     {
@@ -25,9 +25,9 @@ const HeroSection = () => {
       image: portfolio2,
     },
     {
-      name: "Your New Home",
-      url: "https://your-new-home-nu.vercel.app/",
-      image: null,
+      name: "welcome point",
+      url: "https://welcome-point.vercel.app/",
+      image: portfolioW,
     },
   ];
 
